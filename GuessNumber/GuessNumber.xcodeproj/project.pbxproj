@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84A5CCD318A11A4C00C8EFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD218A11A4C00C8EFF8 /* Foundation.framework */; };
+		84A5CCD518A11A4C00C8EFF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD418A11A4C00C8EFF8 /* CoreGraphics.framework */; };
+		84A5CCD718A11A4C00C8EFF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD618A11A4C00C8EFF8 /* UIKit.framework */; };
+		84A5CCDD18A11A4C00C8EFF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84A5CCDB18A11A4C00C8EFF8 /* InfoPlist.strings */; };
+		84A5CCDF18A11A4C00C8EFF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5CCDE18A11A4C00C8EFF8 /* main.m */; };
+		84A5CCE318A11A4C00C8EFF8 /* GNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5CCE218A11A4C00C8EFF8 /* GNAppDelegate.m */; };
+		84A5CCE618A11A4C00C8EFF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5CCE418A11A4C00C8EFF8 /* Main.storyboard */; };
+		84A5CCE918A11A4C00C8EFF8 /* GNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5CCE818A11A4C00C8EFF8 /* GNViewController.m */; };
+		84A5CCEB18A11A4C00C8EFF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A5CCEA18A11A4C00C8EFF8 /* Images.xcassets */; };
+		84A5CCF218A11A4C00C8EFF8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCF118A11A4C00C8EFF8 /* XCTest.framework */; };
+		84A5CCF318A11A4C00C8EFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD218A11A4C00C8EFF8 /* Foundation.framework */; };
+		84A5CCF418A11A4C00C8EFF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD618A11A4C00C8EFF8 /* UIKit.framework */; };
+		84A5CCFC18A11A4C00C8EFF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84A5CCFA18A11A4C00C8EFF8 /* InfoPlist.strings */; };
+		84A5CCFE18A11A4C00C8EFF8 /* GuessNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5CCFD18A11A4C00C8EFF8 /* GuessNumberTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84A5CCF518A11A4C00C8EFF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84A5CCC718A11A4C00C8EFF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84A5CCCE18A11A4C00C8EFF8;
+			remoteInfo = GuessNumber;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84A5CCCF18A11A4C00C8EFF8 /* GuessNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A5CCD218A11A4C00C8EFF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84A5CCD418A11A4C00C8EFF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84A5CCD618A11A4C00C8EFF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84A5CCDA18A11A4C00C8EFF8 /* GuessNumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessNumber-Info.plist"; sourceTree = "<group>"; };
+		84A5CCDC18A11A4C00C8EFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84A5CCDE18A11A4C00C8EFF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84A5CCE018A11A4C00C8EFF8 /* GuessNumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GuessNumber-Prefix.pch"; sourceTree = "<group>"; };
+		84A5CCE118A11A4C00C8EFF8 /* GNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNAppDelegate.h; sourceTree = "<group>"; };
+		84A5CCE218A11A4C00C8EFF8 /* GNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNAppDelegate.m; sourceTree = "<group>"; };
+		84A5CCE518A11A4C00C8EFF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84A5CCE718A11A4C00C8EFF8 /* GNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNViewController.h; sourceTree = "<group>"; };
+		84A5CCE818A11A4C00C8EFF8 /* GNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNViewController.m; sourceTree = "<group>"; };
+		84A5CCEA18A11A4C00C8EFF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84A5CCF018A11A4C00C8EFF8 /* GuessNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A5CCF118A11A4C00C8EFF8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84A5CCF918A11A4C00C8EFF8 /* GuessNumberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessNumberTests-Info.plist"; sourceTree = "<group>"; };
+		84A5CCFB18A11A4C00C8EFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84A5CCFD18A11A4C00C8EFF8 /* GuessNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessNumberTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84A5CCCC18A11A4C00C8EFF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5CCD518A11A4C00C8EFF8 /* CoreGraphics.framework in Frameworks */,
+				84A5CCD718A11A4C00C8EFF8 /* UIKit.framework in Frameworks */,
+				84A5CCD318A11A4C00C8EFF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A5CCED18A11A4C00C8EFF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5CCF218A11A4C00C8EFF8 /* XCTest.framework in Frameworks */,
+				84A5CCF418A11A4C00C8EFF8 /* UIKit.framework in Frameworks */,
+				84A5CCF318A11A4C00C8EFF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84A5CCC618A11A4C00C8EFF8 = {
+			isa = PBXGroup;
+			children = (
+				84A5CCD818A11A4C00C8EFF8 /* GuessNumber */,
+				84A5CCF718A11A4C00C8EFF8 /* GuessNumberTests */,
+				84A5CCD118A11A4C00C8EFF8 /* Frameworks */,
+				84A5CCD018A11A4C00C8EFF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84A5CCD018A11A4C00C8EFF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84A5CCCF18A11A4C00C8EFF8 /* GuessNumber.app */,
+				84A5CCF018A11A4C00C8EFF8 /* GuessNumberTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84A5CCD118A11A4C00C8EFF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84A5CCD218A11A4C00C8EFF8 /* Foundation.framework */,
+				84A5CCD418A11A4C00C8EFF8 /* CoreGraphics.framework */,
+				84A5CCD618A11A4C00C8EFF8 /* UIKit.framework */,
+				84A5CCF118A11A4C00C8EFF8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84A5CCD818A11A4C00C8EFF8 /* GuessNumber */ = {
+			isa = PBXGroup;
+			children = (
+				84A5CCE118A11A4C00C8EFF8 /* GNAppDelegate.h */,
+				84A5CCE218A11A4C00C8EFF8 /* GNAppDelegate.m */,
+				84A5CCE418A11A4C00C8EFF8 /* Main.storyboard */,
+				84A5CCE718A11A4C00C8EFF8 /* GNViewController.h */,
+				84A5CCE818A11A4C00C8EFF8 /* GNViewController.m */,
+				84A5CCEA18A11A4C00C8EFF8 /* Images.xcassets */,
+				84A5CCD918A11A4C00C8EFF8 /* Supporting Files */,
+			);
+			path = GuessNumber;
+			sourceTree = "<group>";
+		};
+		84A5CCD918A11A4C00C8EFF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84A5CCDA18A11A4C00C8EFF8 /* GuessNumber-Info.plist */,
+				84A5CCDB18A11A4C00C8EFF8 /* InfoPlist.strings */,
+				84A5CCDE18A11A4C00C8EFF8 /* main.m */,
+				84A5CCE018A11A4C00C8EFF8 /* GuessNumber-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84A5CCF718A11A4C00C8EFF8 /* GuessNumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				84A5CCFD18A11A4C00C8EFF8 /* GuessNumberTests.m */,
+				84A5CCF818A11A4C00C8EFF8 /* Supporting Files */,
+			);
+			path = GuessNumberTests;
+			sourceTree = "<group>";
+		};
+		84A5CCF818A11A4C00C8EFF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84A5CCF918A11A4C00C8EFF8 /* GuessNumberTests-Info.plist */,
+				84A5CCFA18A11A4C00C8EFF8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84A5CCCE18A11A4C00C8EFF8 /* GuessNumber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A5CD0118A11A4C00C8EFF8 /* Build configuration list for PBXNativeTarget "GuessNumber" */;
+			buildPhases = (
+				84A5CCCB18A11A4C00C8EFF8 /* Sources */,
+				84A5CCCC18A11A4C00C8EFF8 /* Frameworks */,
+				84A5CCCD18A11A4C00C8EFF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GuessNumber;
+			productName = GuessNumber;
+			productReference = 84A5CCCF18A11A4C00C8EFF8 /* GuessNumber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84A5CCEF18A11A4C00C8EFF8 /* GuessNumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A5CD0418A11A4C00C8EFF8 /* Build configuration list for PBXNativeTarget "GuessNumberTests" */;
+			buildPhases = (
+				84A5CCEC18A11A4C00C8EFF8 /* Sources */,
+				84A5CCED18A11A4C00C8EFF8 /* Frameworks */,
+				84A5CCEE18A11A4C00C8EFF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84A5CCF618A11A4C00C8EFF8 /* PBXTargetDependency */,
+			);
+			name = GuessNumberTests;
+			productName = GuessNumberTests;
+			productReference = 84A5CCF018A11A4C00C8EFF8 /* GuessNumberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84A5CCC718A11A4C00C8EFF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GN;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ming-Zhe";
+				TargetAttributes = {
+					84A5CCEF18A11A4C00C8EFF8 = {
+						TestTargetID = 84A5CCCE18A11A4C00C8EFF8;
+					};
+				};
+			};
+			buildConfigurationList = 84A5CCCA18A11A4C00C8EFF8 /* Build configuration list for PBXProject "GuessNumber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84A5CCC618A11A4C00C8EFF8;
+			productRefGroup = 84A5CCD018A11A4C00C8EFF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84A5CCCE18A11A4C00C8EFF8 /* GuessNumber */,
+				84A5CCEF18A11A4C00C8EFF8 /* GuessNumberTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84A5CCCD18A11A4C00C8EFF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5CCEB18A11A4C00C8EFF8 /* Images.xcassets in Resources */,
+				84A5CCDD18A11A4C00C8EFF8 /* InfoPlist.strings in Resources */,
+				84A5CCE618A11A4C00C8EFF8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A5CCEE18A11A4C00C8EFF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5CCFC18A11A4C00C8EFF8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84A5CCCB18A11A4C00C8EFF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5CCDF18A11A4C00C8EFF8 /* main.m in Sources */,
+				84A5CCE918A11A4C00C8EFF8 /* GNViewController.m in Sources */,
+				84A5CCE318A11A4C00C8EFF8 /* GNAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A5CCEC18A11A4C00C8EFF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5CCFE18A11A4C00C8EFF8 /* GuessNumberTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84A5CCF618A11A4C00C8EFF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84A5CCCE18A11A4C00C8EFF8 /* GuessNumber */;
+			targetProxy = 84A5CCF518A11A4C00C8EFF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84A5CCDB18A11A4C00C8EFF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A5CCDC18A11A4C00C8EFF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84A5CCE418A11A4C00C8EFF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A5CCE518A11A4C00C8EFF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84A5CCFA18A11A4C00C8EFF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A5CCFB18A11A4C00C8EFF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84A5CCFF18A11A4C00C8EFF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84A5CD0018A11A4C00C8EFF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84A5CD0218A11A4C00C8EFF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessNumber/GuessNumber-Prefix.pch";
+				INFOPLIST_FILE = "GuessNumber/GuessNumber-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84A5CD0318A11A4C00C8EFF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessNumber/GuessNumber-Prefix.pch";
+				INFOPLIST_FILE = "GuessNumber/GuessNumber-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		84A5CD0518A11A4C00C8EFF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessNumber.app/GuessNumber";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessNumber/GuessNumber-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GuessNumberTests/GuessNumberTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		84A5CD0618A11A4C00C8EFF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessNumber.app/GuessNumber";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessNumber/GuessNumber-Prefix.pch";
+				INFOPLIST_FILE = "GuessNumberTests/GuessNumberTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84A5CCCA18A11A4C00C8EFF8 /* Build configuration list for PBXProject "GuessNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A5CCFF18A11A4C00C8EFF8 /* Debug */,
+				84A5CD0018A11A4C00C8EFF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A5CD0118A11A4C00C8EFF8 /* Build configuration list for PBXNativeTarget "GuessNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A5CD0218A11A4C00C8EFF8 /* Debug */,
+				84A5CD0318A11A4C00C8EFF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84A5CD0418A11A4C00C8EFF8 /* Build configuration list for PBXNativeTarget "GuessNumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A5CD0518A11A4C00C8EFF8 /* Debug */,
+				84A5CD0618A11A4C00C8EFF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84A5CCC718A11A4C00C8EFF8 /* Project object */;
+}
