@@ -10,4 +10,6 @@
 
 @interface GNViewController : UIViewController
 
+-(IBAction)showAlert;
+
 @end
