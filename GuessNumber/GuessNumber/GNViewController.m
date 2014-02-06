@@ -32,4 +32,9 @@
                                               cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show]; }
 
+-(BOOL)shouldAutorotateToInterfaceOrientation:
+(UIInterfaceOrientation)toInterfaceOrientation{
+    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation); }
+
+
 @end

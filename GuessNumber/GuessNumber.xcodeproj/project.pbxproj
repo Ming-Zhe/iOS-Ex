@@ -384,6 +384,7 @@
 				INFOPLIST_FILE = "GuessNumber/GuessNumber-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,6 +399,7 @@
 				INFOPLIST_FILE = "GuessNumber/GuessNumber-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -463,6 +465,7 @@
 				84A5CD0318A11A4C00C8EFF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84A5CD0418A11A4C00C8EFF8 /* Build configuration list for PBXNativeTarget "GuessNumberTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +474,7 @@
 				84A5CD0618A11A4C00C8EFF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
