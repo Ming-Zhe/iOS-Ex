@@ -10,6 +10,9 @@
 
 @interface GNViewController : UIViewController
 
+-(IBAction)sliderMoved:(UISlider *)sender;
 -(IBAction)showAlert;
+
+@property (nonatomic, strong) IBOutlet UISlider *slider;
 
 @end

@@ -12,12 +12,19 @@
 
 @end
 
-@implementation GNViewController
+@implementation GNViewController{
+    int currentValue;
+}
+
+@synthesize slider;
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    currentValue = self.slider.value;
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,10 +34,18 @@
 }
 
 -(IBAction)showAlert{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello"
-                                                        message:@"Hello World" delegate:nil
-                                              cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show]; }
+    NSString *message = [NSString stringWithFormat:@"Current Number:%d",currentValue];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Log"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+-(IBAction)sliderMoved:(UISlider *)sender{
+    currentValue = sender.value;
+}
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:
 (UIInterfaceOrientation)toInterfaceOrientation{
