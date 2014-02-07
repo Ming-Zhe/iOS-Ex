@@ -7,6 +7,7 @@
 //
 
 #import "GNViewController.h"
+#import "AboutGNViewController.h"
 
 @interface GNViewController ()
 
@@ -110,8 +111,19 @@
     [self updateLabels];
 }
 
--(BOOL)shouldAutorotateToInterfaceOrientation:
-(UIInterfaceOrientation)toInterfaceOrientation{
-    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation); }
+- (IBAction)showInfo
+{
+    AboutGNViewController *controller = [[AboutGNViewController alloc]
+                                       initWithNibName:@"AboutViewController"
+                                                bundle:nil];
+    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:controller
+                       animated:YES
+                     completion:nil];
+}
+
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) toInterfaceOrientation{
+    return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
+}
 
 @end

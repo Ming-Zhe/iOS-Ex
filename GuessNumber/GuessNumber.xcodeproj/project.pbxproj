@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84091D6B18A53470001CEBB3 /* AboutGNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84091D6918A53470001CEBB3 /* AboutGNViewController.m */; };
+		84091D6C18A53470001CEBB3 /* AboutGNViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84091D6A18A53470001CEBB3 /* AboutGNViewController.xib */; };
 		84A5CCD318A11A4C00C8EFF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD218A11A4C00C8EFF8 /* Foundation.framework */; };
 		84A5CCD518A11A4C00C8EFF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD418A11A4C00C8EFF8 /* CoreGraphics.framework */; };
 		84A5CCD718A11A4C00C8EFF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A5CCD618A11A4C00C8EFF8 /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84091D6818A53470001CEBB3 /* AboutGNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutGNViewController.h; sourceTree = "<group>"; };
+		84091D6918A53470001CEBB3 /* AboutGNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutGNViewController.m; sourceTree = "<group>"; };
+		84091D6A18A53470001CEBB3 /* AboutGNViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutGNViewController.xib; sourceTree = "<group>"; };
 		84A5CCCF18A11A4C00C8EFF8 /* GuessNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5CCD218A11A4C00C8EFF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A5CCD418A11A4C00C8EFF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +122,9 @@
 				84A5CCE418A11A4C00C8EFF8 /* Main.storyboard */,
 				84A5CCE718A11A4C00C8EFF8 /* GNViewController.h */,
 				84A5CCE818A11A4C00C8EFF8 /* GNViewController.m */,
+				84091D6818A53470001CEBB3 /* AboutGNViewController.h */,
+				84091D6918A53470001CEBB3 /* AboutGNViewController.m */,
+				84091D6A18A53470001CEBB3 /* AboutGNViewController.xib */,
 				84A5CCEA18A11A4C00C8EFF8 /* Images.xcassets */,
 				84A5CCD918A11A4C00C8EFF8 /* Supporting Files */,
 			);
@@ -230,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A5CCEB18A11A4C00C8EFF8 /* Images.xcassets in Resources */,
+				84091D6C18A53470001CEBB3 /* AboutGNViewController.xib in Resources */,
 				84A5CCDD18A11A4C00C8EFF8 /* InfoPlist.strings in Resources */,
 				84A5CCE618A11A4C00C8EFF8 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A5CCDF18A11A4C00C8EFF8 /* main.m in Sources */,
+				84091D6B18A53470001CEBB3 /* AboutGNViewController.m in Sources */,
 				84A5CCE918A11A4C00C8EFF8 /* GNViewController.m in Sources */,
 				84A5CCE318A11A4C00C8EFF8 /* GNAppDelegate.m in Sources */,
 			);
