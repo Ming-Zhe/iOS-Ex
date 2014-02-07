@@ -14,6 +14,7 @@
 
 @implementation GNViewController{
     int currentValue;
+    int targetValue;
 }
 
 @synthesize slider;
@@ -25,6 +26,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     currentValue = self.slider.value;
+    targetValue = 1 + (arc4random()%100);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,7 +37,7 @@
 }
 
 -(IBAction)showAlert{
-    NSString *message = [NSString stringWithFormat:@"Current Number:%d",currentValue];
+    NSString *message = [NSString stringWithFormat:@"Current Number:%d\nTarget Number:%d",currentValue,targetValue];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Log"
                                                         message:message
                                                        delegate:nil
