@@ -40,12 +40,18 @@
     self.slider.value = currentValue;
 }
 
+-(void)startNewGame{
+    score = 0;
+    round = 0;
+    [self startNewRound];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self startNewRound];
+    [self startNewGame];
     [self updateLabels];
     
 }
@@ -56,10 +62,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)startOver{
+    [self startNewGame];
+    [self updateLabels];
+}
+
 -(IBAction)showAlert{
     int difference = abs(currentValue - targetValue);
     int points = 100 - difference;
-    score += points;
     
     NSString *title;
     if(difference == 0){
@@ -78,6 +88,8 @@
     else{
         title = @"差太远了吧!";
     }
+    
+    score += points;
     
     NSString *message = [NSString stringWithFormat:@"本轮得分：%d",points];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
