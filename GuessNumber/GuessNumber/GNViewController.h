@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GNViewController : UIViewController
+@interface GNViewController : UIViewController<UIAlertViewDelegate>
 
 -(IBAction)sliderMoved:(UISlider *)sender;
 -(IBAction)showAlert;
