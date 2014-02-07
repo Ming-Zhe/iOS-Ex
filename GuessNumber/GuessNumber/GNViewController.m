@@ -18,15 +18,20 @@
 }
 
 @synthesize slider;
+@synthesize targetLabel;
 
+- (void)startNewRound{
 
+    targetValue = 1 + (arc4random()%100);
+    currentValue = 50;
+    self.slider.value = currentValue;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    currentValue = self.slider.value;
-    targetValue = 1 + (arc4random()%100);
+    [self startNewRound];
     
 }
 
@@ -44,6 +49,7 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
     [alertView show];
+    [self startNewRound];
 }
 
 -(IBAction)sliderMoved:(UISlider *)sender{
