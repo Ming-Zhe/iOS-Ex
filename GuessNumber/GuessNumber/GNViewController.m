@@ -16,20 +16,25 @@
     int currentValue;
     int targetValue;
     int score;
+    int round;
 }
 
 @synthesize slider;
 @synthesize targetLabel;
 @synthesize scoreLabel;
+@synthesize roundLabel;
 
 - (void)updateLabels{
-
+    
     self.targetLabel.text = [NSString stringWithFormat:@"%d",targetValue];
     self.scoreLabel.text = [NSString stringWithFormat:@"%d",score];
+    self.roundLabel.text = [NSString stringWithFormat:@"%d",round];
 }
 
 - (void)startNewRound{
 
+    round += 1;
+    
     targetValue = 1 + (arc4random()%100);
     currentValue = 50;
     self.slider.value = currentValue;
@@ -39,6 +44,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
     [self startNewRound];
     [self updateLabels];
     

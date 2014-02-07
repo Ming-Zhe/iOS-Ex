@@ -105,6 +105,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="roundLabel" destination="PRv-gl-T1F" id="UQn-Fx-wn8"/>
                         <outlet property="scoreLabel" destination="UL1-VS-ySx" id="ZQ2-l4-1aT"/>
                         <outlet property="slider" destination="Cmr-Xd-4pp" id="cCh-aj-xbP"/>
                         <outlet property="targetLabel" destination="xhR-SS-hgn" id="WmV-C4-MMn"/>
