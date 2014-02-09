@@ -10,4 +10,7 @@
 
 @interface GGViewController : UIViewController
 
+- (IBAction)showAlert:(id)sender;
+
+
 @end
