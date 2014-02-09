@@ -463,6 +463,7 @@
 				84E805C318A5E9B6009673E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E805C418A5E9B6009673E0 /* Build configuration list for PBXNativeTarget "GuessGameTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +472,7 @@
 				84E805C618A5E9B6009673E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
