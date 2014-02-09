@@ -11,6 +11,7 @@
 @interface GGViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UILabel *targetLabel;
 
 - (IBAction)showAlert:(id)sender;
 - (IBAction)sliderMoved:(id)sender;

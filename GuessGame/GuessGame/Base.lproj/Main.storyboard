@@ -104,6 +104,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="slider" destination="kcu-ro-28C" id="Nc2-Q2-XTQ"/>
+                        <outlet property="targetLabel" destination="7im-5G-B1I" id="Ogz-8F-4NL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
