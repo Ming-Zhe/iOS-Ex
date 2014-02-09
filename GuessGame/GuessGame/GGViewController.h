@@ -10,7 +10,10 @@
 
 @interface GGViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
 - (IBAction)showAlert:(id)sender;
+- (IBAction)sliderMoved:(id)sender;
 
 
 @end

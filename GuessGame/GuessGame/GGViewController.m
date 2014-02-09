@@ -9,15 +9,28 @@
 #import "GGViewController.h"
 
 @interface GGViewController ()
-
 @end
 
-@implementation GGViewController
+@implementation GGViewController{
+    
+    int currentValue;
+    int targetValue;
+}
+
+
+@synthesize slider;
+
+-(void)startNewRound{
+    targetValue = 1+(arc4random()%100);
+    currentValue = 50;
+    self.slider.value = currentValue;
+}
 
 - (void)viewDidLoad
-{
+{   
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self startNewRound];
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,12 +40,19 @@
 }
 
 - (IBAction)showAlert:(id)sender {
+    NSString *message = [NSString stringWithFormat:@"Current Value:%d",currentValue];
     [[[UIAlertView alloc]initWithTitle:@"Hello World"
-                               message:@"Hello"
+                               message:message
                               delegate:nil
                      cancelButtonTitle:@"OK"
                      otherButtonTitles:nil,nil]
      show];
+    [self startNewRound];
+}
+
+- (IBAction)sliderMoved:(id)sender {
+    //UISlider *slider = (UISlider*)sender;
+    currentValue = (int)lroundf(slider.value);
 }
 
 
