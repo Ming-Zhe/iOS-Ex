@@ -9,7 +9,11 @@
 #import "GGViewController.h"
 #import "AboutViewController.h"
 
+
 @interface GGViewController ()
+
+
+
 @end
 
 @implementation GGViewController
@@ -24,6 +28,7 @@
 @synthesize targetLabel;
 @synthesize scoreLabel;
 @synthesize roundLabel;
+@synthesize audioPlayer;
 
 -(void)startNewGame{
     score = 0;
@@ -49,6 +54,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    [self playBackgroundMusic];
+    
     UIImage *thumbImageNormal = [UIImage imageNamed:@"SliderThumb-Normal"];
     [self.slider setThumbImage:thumbImageNormal forState:UIControlStateNormal];
     UIImage *thumbImageHighlighted = [UIImage imageNamed:@"SliderThumb- Highlighted"];
@@ -60,6 +67,22 @@
     
     [self startNewGame];
     [self updateLabels];
+}
+
+-(void)playBackgroundMusic{
+    NSString *musicPath =[[NSBundle mainBundle]pathForResource:@"no"
+                                                        ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:musicPath];
+    NSError *error;
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url
+                                                        error:&error];
+    audioPlayer.numberOfLoops = -1;
+    if(audioPlayer ==nil){
+        NSString *errorInfo = [NSString stringWithString:[error description]];
+        NSLog(@"the error is:%@",errorInfo);
+    }else{
+        [audioPlayer play];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,8 +135,16 @@
 }
 
 - (IBAction)startOver:(id)sender {
+    
+    //添加过渡效果
+    CATransition *transition = [CATransition animation]; transition.type = kCATransitionFade;
+    transition.duration = 3;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    
     [self startNewGame];
     [self updateLabels];
+    
+    [self.view.layer addAnimation:transition forKey:nil];
 }
 
 - (IBAction)showInfo:(id)sender {

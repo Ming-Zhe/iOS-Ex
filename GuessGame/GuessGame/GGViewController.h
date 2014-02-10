@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface GGViewController : UIViewController<UIAlertViewDelegate>
 
@@ -15,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *targetLabel;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *roundLabel;
+
+@property(nonatomic,strong)AVAudioPlayer *audioPlayer;
 
 - (IBAction)showAlert:(id)sender;
 - (IBAction)sliderMoved:(id)sender;
