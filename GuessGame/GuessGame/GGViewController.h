@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GGViewController : UIViewController
+@interface GGViewController : UIViewController<UIAlertViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UISlider *slider;
-@property (weak, nonatomic) IBOutlet UILabel *targetLabel;
+
+@property (strong, nonatomic) IBOutlet UISlider *slider;
+@property (strong, nonatomic) IBOutlet UILabel *targetLabel;
+@property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutlet UILabel *roundLabel;
 
 - (IBAction)showAlert:(id)sender;
 - (IBAction)sliderMoved:(id)sender;
+- (IBAction)startOver:(id)sender;
+- (IBAction)showInfo:(id)sender;
 
 
 @end

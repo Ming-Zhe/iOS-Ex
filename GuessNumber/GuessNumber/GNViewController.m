@@ -114,7 +114,7 @@
 - (IBAction)showInfo
 {
     AboutGNViewController *controller = [[AboutGNViewController alloc]
-                                       initWithNibName:@"AboutViewController"
+                                       initWithNibName:@"AboutGNViewController"
                                                 bundle:nil];
     controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:controller
