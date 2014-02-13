@@ -98,4 +98,24 @@
     
 }
 
+- (IBAction)addItem:(id)sender {
+    
+    NSInteger newRowIndex = [_items count];
+    ChecklistsItem *item =[[ChecklistsItem alloc]init];
+    item.text = @"我是新来的菜⻦鸟,求照顾求虐";
+    item.checked = NO;
+    [_items addObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    NSArray *indexPaths = @[indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle: (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    [_items removeObjectAtIndex:indexPath.row];
+    NSArray *indexPaths = @[indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths
+                     withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 @end
