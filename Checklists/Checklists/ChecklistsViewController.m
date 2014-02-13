@@ -58,17 +58,21 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return [_items count];
 }
 
--(void)configureCheckmarkForCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
+-(void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistsItem:(ChecklistsItem *)item{
     
-    ChecklistsItem *item = _items[indexPath.row];
     if(item.checked){
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }else{
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
+}
+
+-(void)configureTextForCell:(UITableViewCell *)cell withChecklistsItem:(ChecklistsItem *)item{
+    UILabel *label = (UILabel *)[cell viewWithTag:1000];
+    label.text = item.text;
 }
 
 -(UITableViewCell*)tableView: (UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -78,7 +82,8 @@
     
     label.text = item.text;
     
-    [self configureCheckmarkForCell:cell atIndexPath:indexPath];
+    [self configureTextForCell:cell withChecklistsItem:item];
+    [self configureCheckmarkForCell:cell withChecklistsItem:item];
     return cell;
 }
 
@@ -86,9 +91,9 @@
     UITableViewCell *cell =[tableView cellForRowAtIndexPath:indexPath];
     ChecklistsItem *item = _items[indexPath.row];
     
-    item.checked = !item.checked;
+    [item toggleChecked];
     
-    [self configureCheckmarkForCell:cell atIndexPath:indexPath];
+    [self configureCheckmarkForCell:cell withChecklistsItem:item];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
