@@ -14,11 +14,7 @@
 @end
 
 @implementation ChecklistsViewController{
-    ChecklistsItem *_row0item;
-    ChecklistsItem *_row1item;
-    ChecklistsItem *_row2item;
-    ChecklistsItem *_row3item;
-    ChecklistsItem *_row4item;
+    NSMutableArray *_items;
 }
 
 - (void)viewDidLoad
@@ -26,26 +22,33 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    _items = [[NSMutableArray alloc]initWithCapacity:20];
+    ChecklistsItem *item;
     
-    _row0item = [[ChecklistsItem alloc]init];
-    _row0item.text =@"观看嫦娥⻜飞天和⽟玉兔升空的视频";
-    _row0item.checked = NO;
+    item = [[ChecklistsItem alloc]init];
+    item.text =@"观看嫦娥⻜飞天和⽟玉兔升空的视频";
+    item.checked = NO;
+    [_items addObject:item];
     
-    _row1item = [[ChecklistsItem alloc]init];
-    _row1item.text =@"了解Sony a7和MBP的最新价格";
-    _row1item.checked = NO;
+    item = [[ChecklistsItem alloc]init];
+    item.text =@"了解Sony a7和MBP的最新价格";
+    item.checked = NO;
     
-    _row2item = [[ChecklistsItem alloc]init];
-    _row2item.text =@"复习苍⽼老师的经典视频教程";
-    _row2item.checked = NO;
+    [_items addObject:item];
+    item = [[ChecklistsItem alloc]init];
+    item.text =@"复习苍⽼老师的经典视频教程";
+    item.checked = NO;
+    [_items addObject:item];
     
-    _row3item = [[ChecklistsItem alloc]init];
-    _row3item.text =@"去电影院看地⼼心引⼒力";
-    _row3item.checked = NO;
+    item = [[ChecklistsItem alloc]init];
+    item.text =@"去电影院看地⼼心引⼒力";
+    item.checked = NO;
+    [_items addObject:item];
     
-    _row4item = [[ChecklistsItem alloc]init];
-    _row4item.text =@"看⻄西甲巴萨新败的⽐比赛回放";
-    _row4item.checked = NO;
+    item = [[ChecklistsItem alloc]init];
+    item.text =@"看⻄西甲巴萨新败的⽐比赛回放";
+    item.checked = NO;
+    [_items addObject:item];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,19 +62,9 @@
 }
 
 -(void)configureCheckmarkForCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
-    BOOL isChecked = NO;
-    if(indexPath.row ==0){
-        isChecked = _row0item.checked;
-    }else if(indexPath.row ==1){
-        isChecked = _row1item.checked;
-    }else if(indexPath.row ==2){
-        isChecked = _row2item.checked;
-    }else if(indexPath.row ==3){
-        isChecked = _row3item.checked;
-    }else if(indexPath.row ==4){
-        isChecked = _row4item.checked;
-    }
-    if(isChecked){
+    
+    ChecklistsItem *item = _items[indexPath.row];
+    if(item.checked){
         cell.accessoryType = UITableViewCellAccessoryNone;
     }else{
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -80,19 +73,10 @@
 
 -(UITableViewCell*)tableView: (UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"ChecklistItem"];
+    ChecklistsItem *item = _items[indexPath.row];
     UILabel *label = (UILabel*)[cell viewWithTag:1000];
     
-    if(indexPath.row ==0){
-        label.text = _row0item.text;
-    }else if(indexPath.row ==1){
-        label.text = _row1item.text;
-    }else if(indexPath.row ==2){
-        label.text = _row2item.text;
-    }else if(indexPath.row ==3){
-        label.text = _row3item.text;
-    }else if(indexPath.row ==4){
-        label.text = _row4item.text;
-    }
+    label.text = item.text;
     
     [self configureCheckmarkForCell:cell atIndexPath:indexPath];
     return cell;
@@ -100,18 +84,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell =[tableView cellForRowAtIndexPath:indexPath];
+    ChecklistsItem *item = _items[indexPath.row];
     
-    if(indexPath.row ==0){
-        _row0item.checked = !_row0item.checked;
-    }else if(indexPath.row ==1){
-        _row1item.checked = !_row1item.checked;
-    }if(indexPath.row ==2){
-        _row2item.checked = !_row2item.checked;
-    }if(indexPath.row ==3){
-        _row3item.checked = !_row3item.checked;
-    }if(indexPath.row ==4){
-        _row4item.checked = !_row4item.checked;
-    }
+    item.checked = !item.checked;
     
     [self configureCheckmarkForCell:cell atIndexPath:indexPath];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
