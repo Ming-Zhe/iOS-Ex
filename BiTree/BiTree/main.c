@@ -27,7 +27,7 @@ BiTree Create(BiTree t)
     }
     char c;
     scanf("%c",&c);
-    if(c == '#'){               // 空格表示叶子
+    if(c == ' '){               // 空格表示叶子
         t = NULL;
     }
     else{
@@ -71,17 +71,19 @@ int main(int argc, const char * argv[])
     
 
     // insert code here...
-    printf("Hello, World!\n");
+    printf("先序输入二叉树，空格表示叶子节点:\n");
     
     BiTree T = NULL;
     T = Create(T);
     
-    printf("\n");
-    printf("\n");
+    printf("\n先序：\n");
     
     PreOrder(T);
     
-    printf("Hello, World!\n");
+    printf("\n中序：\n");
+    InOrder(T);
+    printf("\n后序：\n");
+    PostOrder(T);
     
     return 0;
 }
