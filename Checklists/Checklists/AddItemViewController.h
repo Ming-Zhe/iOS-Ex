@@ -14,7 +14,7 @@
 @protocol AddItemViewControllerDelegate <NSObject>
 
 -(void)addItemViewControllerDidCancel:(AddItemViewController *)controller;
-_(void)addItemViewController:(AddItemViewController *)controller didFinishAddingItem:(ChecklistsItem *)item;
+//_(void)addItemViewController:(AddItemViewController *)controller didFinishAddingItem:(ChecklistsItem *)item;
 
 @end
 
