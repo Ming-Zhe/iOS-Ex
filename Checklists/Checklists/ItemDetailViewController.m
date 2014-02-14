@@ -1,18 +1,19 @@
 //
-//  AddItemViewController.m
+//  ItemDetailViewController.m
 //  Checklists
 //
 //  Created by Ming-Zhe on 14-2-13.
 //  Copyright (c) 2014年 Ming-Zhe. All rights reserved.
 //
 
-#import "AddItemViewController.h"
+#import "ItemDetailViewController.h"
+#import "ChecklistsItem.h"
 
-@interface AddItemViewController ()
+@interface ItemDetailViewController ()
 
 @end
 
-@implementation AddItemViewController
+@implementation ItemDetailViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +38,12 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    if(self.itemToEdit != nil){
+        self.title = @"Edit Item";
+        self.textField.text = self.itemToEdit.text;
+        self.doneBarButton.enabled = YES;
+    }
 }
 
 
@@ -63,14 +70,26 @@
 
 - (IBAction)cancel:(id)sender {
     
-    [self.presentingViewController dismissViewControllerAnimated:YES
-                                                      completion:nil];
+    [self.delegate itemDetailViewControllerDidCancel:self];
+//    [self.presentingViewController dismissViewControllerAnimated:YES
+//                                                      completion:nil];
 }
 
 - (IBAction)done:(id)sender {
     
-    NSLog(@"%@",self.textField.text);
-    [self.presentingViewController dismissViewControllerAnimated:YES
-                                                      completion:nil];
+//    NSLog(@"%@",self.textField.text);
+//    [self.presentingViewController dismissViewControllerAnimated:YES
+//                                                      completion:nil];
+    if (self.itemToEdit == nil) {
+        ChecklistsItem *item = [[ChecklistsItem alloc]init];
+        item.text = self.textField.text;
+        item.checked = NO;
+        
+        [self.delegate itemDetailViewController:self didFinishAddingItem:item];
+    }else{
+        self.itemToEdit.text = self.textField.text;
+        [self.delegate itemDetailViewcontroller:self didFinishEditingItem:self.itemToEdit];
+    }
+    
 }
 @end
