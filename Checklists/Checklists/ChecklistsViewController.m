@@ -76,6 +76,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// return number of rows in section
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_items count];
 }

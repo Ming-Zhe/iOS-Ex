@@ -77,9 +77,7 @@ int main(int argc, const char * argv[])
     T = Create(T);
     
     printf("\n先序：\n");
-    
     PreOrder(T);
-    
     printf("\n中序：\n");
     InOrder(T);
     printf("\n后序：\n");
