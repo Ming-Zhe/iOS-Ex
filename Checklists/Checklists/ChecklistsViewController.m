@@ -148,7 +148,7 @@
     }
 }
 
-//delegate function begin
+//delegate functions begin
 -(void)itemDetailViewControllerDidCancel:(ItemDetailViewController *)controller{
     [self dismissViewControllerAnimated:YES
                              completion:nil];
