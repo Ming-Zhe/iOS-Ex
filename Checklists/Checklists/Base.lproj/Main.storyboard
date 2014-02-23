@@ -29,7 +29,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="gtY-5O-0ip"/>
                     <connections>
-                        <segue destination="0de-bg-aGz" kind="push" id="aLB-ns-s9Z"/>
+                        <segue destination="0de-bg-aGz" kind="push" identifier="ShowChecklist" id="aLB-ns-s9Z"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmh-N1-9vE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,7 +146,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HcZ-cx-Q9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="17"/>
+            <point key="canvasLocation" x="1571" y="17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ORO-VM-B9F">

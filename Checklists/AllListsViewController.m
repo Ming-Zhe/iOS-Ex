@@ -7,18 +7,45 @@
 //
 
 #import "AllListsViewController.h"
+#import "Checklist.h"
 
 @interface AllListsViewController ()
 
 @end
 
-@implementation AllListsViewController
+@implementation AllListsViewController{
+    NSMutableArray *_lists;
+}
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
+//- (id)initWithStyle:(UITableViewStyle)style
+//{
+//    self = [super initWithStyle:style];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    if((self =[super initWithCoder:aDecoder])){
+        _lists = [[NSMutableArray alloc]initWithCapacity:20];
+        Checklist *list;
+            
+        list = [[Checklist alloc]init];
+        list.name = @"娱乐";
+        [_lists addObject:list];
+            
+        list = [[Checklist alloc]init];
+        list.name = @"⼯作";
+        [_lists addObject:list];
+            
+        list = [[Checklist alloc]init];
+        list.name = @"学习";
+        [_lists addObject:list];
+            
+        list = [[Checklist alloc]init];
+        list.name = @"家庭";
+        [_lists addObject:list];
     }
     return self;
 }
@@ -53,7 +80,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     
@@ -62,6 +90,10 @@
     }
     cell.textLabel.text = [NSString stringWithFormat:@"清单: %ld",(long)indexPath.row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"ShowChecklist" sender:nil];
 }
 
 /*
