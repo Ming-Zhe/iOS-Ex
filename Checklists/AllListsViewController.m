@@ -90,7 +90,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"ShowChecklist" sender:nil];
+    Checklist *checklist = _lists[indexPath.row];
+    [self performSegueWithIdentifier:@"ShowChecklist" sender:checklist];
 }
 
 /*
