@@ -8,6 +8,7 @@
 
 #import "ChecklistViewController.h"
 #import "ChecklistsItem.h"
+#import "Checklist.h"
 
 @interface ChecklistViewController ()
 
@@ -54,8 +55,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSLog(@"⽂文件夹的⺫⽬目录是:%@",[self documentsDirectory]);
-    NSLog(@"数据⽂文件的最终路径是:%@",[self dataFilePath]);
+//    NSLog(@"⽂文件夹的⺫⽬目录是:%@",[self documentsDirectory]);
+//    NSLog(@"数据⽂文件的最终路径是:%@",[self dataFilePath]);
+    self.title = self.checklist.name;
 }
 
 //  save checklist items function

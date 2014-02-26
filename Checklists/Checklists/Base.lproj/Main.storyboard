@@ -36,7 +36,7 @@
             </objects>
             <point key="canvasLocation" x="290" y="17"/>
         </scene>
-        <!--Checklist View Controller - Checklists-->
+        <!--Checklist View Controller - - -->
         <scene sceneID="eTa-KX-hOy">
             <objects>
                 <tableViewController id="0de-bg-aGz" customClass="ChecklistViewController" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                             <outlet property="delegate" destination="0de-bg-aGz" id="d3j-yJ-sVz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="tGx-Gk-BPR">
+                    <navigationItem key="navigationItem" title="-" id="tGx-Gk-BPR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mqz-oj-uZ5">
                             <connections>
                                 <segue destination="RO8-nN-0r5" kind="modal" identifier="AddItem" id="PId-4C-tM9"/>
