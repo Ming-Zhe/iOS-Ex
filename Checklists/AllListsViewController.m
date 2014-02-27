@@ -7,6 +7,7 @@
 //
 
 #import "AllListsViewController.h"
+#import "ChecklistViewController.h"
 #import "Checklist.h"
 
 @interface AllListsViewController ()
@@ -92,6 +93,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Checklist *checklist = _lists[indexPath.row];
     [self performSegueWithIdentifier:@"ShowChecklist" sender:checklist];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"ShowChecklist"]){
+    ChecklistViewController *controller = segue.destinationViewController;
+    controller.checklist = sender;
+    }
 }
 
 /*
