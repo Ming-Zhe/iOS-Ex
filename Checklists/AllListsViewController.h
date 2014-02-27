@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListDetailViewController.h"
 
 @interface AllListsViewController : UITableViewController
 

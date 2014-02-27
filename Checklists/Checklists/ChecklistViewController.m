@@ -41,7 +41,7 @@
     }
 }
 
-// init data model
+// init data model ?
 -(id)initWithCoder:(NSCoder *)aDecoder{
     if((self =[super initWithCoder:aDecoder])){
         [self loadChecklistItems];
