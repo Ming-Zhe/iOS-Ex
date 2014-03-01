@@ -11,4 +11,6 @@
 
 @interface AllListsViewController : UITableViewController
 
+@property (nonatomic, strong) Checklist *checklist;
+
 @end
