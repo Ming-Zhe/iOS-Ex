@@ -18,10 +18,10 @@ typedef struct Trie{
     struct Trie* next[MAX_LETTER];
 }DNode,*DTree;
 
-DTree creat(DTree tree)
+DTree creat()
 {
     int i;
-    tree = (DTree)malloc(sizeof(DNode));
+    DTree tree = (DTree)malloc(sizeof(DNode));
     tree->value = ' ';
     tree->count = 0;
     for (i = 0; i < MAX_LETTER; i++) {
@@ -33,8 +33,6 @@ DTree creat(DTree tree)
 DTree insert(char *str, DTree tree)
 {
     unsigned long len = strlen(str);
-//    const char * string =
-    //GET_ARRAY_LEN(string, len);
     char string[30];
     strcpy(string, str);
     
@@ -70,22 +68,20 @@ int find(char* str, DTree tree)
     DNode* node = tree;
     
     for (int i = 0; i < len; i++) {
-        for (int j = 0; j < MAX_LETTER; j++) {
-            if (node->next[j]->value == string[i]) {
-                node = node->next[j];
-                break;
-            }
-            else
-            {
-                if (j == MAX_LETTER - 1) {
-                    return 0;
-                }
-            }
+        if (node->next[string[i]-'a'] == NULL) {
+            return 0;
+        }
+        if (node->next[string[i]-'a']->value == string[i]) {
+            node = node->next[string[i]-'a'];
+        }else{
+            printf("find return 0\n");
+            return 0;
         }
         if (i==len - 1) {
-            return node->value;
+            return node->count;
         }
     }
+    printf("find return 0\n");
     return 0;
 }
 
@@ -93,12 +89,16 @@ int main(int argc, const char * argv[])
 {
 
     // insert code here...
-    char* str1 = "asdf";
-    char str2[10];
-    strcpy(str2, str1);
+    DTree tree= creat();
+    tree = insert("asdf", tree);
+    tree = insert("sdfg", tree);
+    tree = insert("xcbf", tree);
+    tree = insert("aszxc", tree);
+    tree = insert("asdf", tree);
     
-    printf("%c\n",str2[1]);
+    int a = find("w", tree);
     
+    printf("%d\n",a);
     printf("Hello, World!\n");
     return 0;
 }
