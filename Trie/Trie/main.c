@@ -42,10 +42,9 @@ DTree insert(char *str, DTree tree)
             node = node->next[string[i] - 'a'];
             if (i==len - 1) {
                 node->count++;
+                printf("\"%s\" insert over\n",str);
             }
-        }
-        else
-        {
+        }else{
             node->next[string[i] - 'a'] = (DNode *)malloc(sizeof(DNode));
             node = node->next[string[i] - 'a'];
             node->value = string[i];
@@ -54,6 +53,7 @@ DTree insert(char *str, DTree tree)
             }
             if (i == len - 1) {
                 node->count++;
+                printf("\"%s\" insert over\n",str);
             }
         }
     }
@@ -69,20 +69,50 @@ int find(char* str, DTree tree)
     
     for (int i = 0; i < len; i++) {
         if (node->next[string[i]-'a'] == NULL) {
+            //printf("find return 0\n");
             return 0;
         }
         if (node->next[string[i]-'a']->value == string[i]) {
             node = node->next[string[i]-'a'];
         }else{
-            printf("find return 0\n");
+            //printf("find return 0\n");
             return 0;
         }
         if (i==len - 1) {
+            //printf("find return node->count\n");
             return node->count;
         }
     }
-    printf("find return 0\n");
+    //printf("find return 0\n");
     return 0;
+}
+
+DTree remove_str(char* str, DTree tree)
+{
+    unsigned long len = strlen(str);
+    char string[30];
+    strcpy(string, str);
+    
+    DNode* node = tree;
+    DTree origin = tree;
+    
+    for (int i = 0; i < len; i++) {
+        if (node->next[string[i] - 'a'] != NULL) {
+            if (node->next[string[i]-'a']->value == string[i]) {
+                node = node->next[string[i]-'a'];
+            }else{
+                break;
+            }
+            if (i==len - 1) {
+                node->count--;
+                printf("\"%s\" Delete over\n",str);
+            }
+        }else{
+            break;
+        }
+    }
+    
+    return origin;
 }
 
 int main(int argc, const char * argv[])
@@ -96,10 +126,13 @@ int main(int argc, const char * argv[])
     tree = insert("aszxc", tree);
     tree = insert("asdf", tree);
     
-    int a = find("w", tree);
+    int a = find("sdfg", tree);
+    printf("%d words to find\n",a);
     
-    printf("%d\n",a);
-    printf("Hello, World!\n");
+    tree = remove_str("sdfg", tree);
+    
+    a = find("sdfg", tree);
+    printf("%d words to find\n",a);
     return 0;
 }
 
