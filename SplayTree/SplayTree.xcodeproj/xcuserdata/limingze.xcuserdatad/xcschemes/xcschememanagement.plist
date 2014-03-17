@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TestApp.xcscheme</key>
+		<key>SplayTree.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>849CD97A18C71C6C0089EB40</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>849CD99B18C71C6C0089EB40</key>
+		<key>84882C6618D7014700BCECA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "849CD97A18C71C6C0089EB40"
-               BuildableName = "TestApp.app"
-               BlueprintName = "TestApp"
-               ReferencedContainer = "container:TestApp.xcodeproj">
+               BlueprintIdentifier = "84882C6618D7014700BCECA6"
+               BuildableName = "SplayTree"
+               BlueprintName = "SplayTree"
+               ReferencedContainer = "container:SplayTree.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "849CD99B18C71C6C0089EB40"
-               BuildableName = "TestAppTests.xctest"
-               BlueprintName = "TestAppTests"
-               ReferencedContainer = "container:TestApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "849CD97A18C71C6C0089EB40"
-            BuildableName = "TestApp.app"
-            BlueprintName = "TestApp"
-            ReferencedContainer = "container:TestApp.xcodeproj">
+            BlueprintIdentifier = "84882C6618D7014700BCECA6"
+            BuildableName = "SplayTree"
+            BlueprintName = "SplayTree"
+            ReferencedContainer = "container:SplayTree.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "849CD97A18C71C6C0089EB40"
-            BuildableName = "TestApp.app"
-            BlueprintName = "TestApp"
-            ReferencedContainer = "container:TestApp.xcodeproj">
+            BlueprintIdentifier = "84882C6618D7014700BCECA6"
+            BuildableName = "SplayTree"
+            BlueprintName = "SplayTree"
+            ReferencedContainer = "container:SplayTree.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "849CD97A18C71C6C0089EB40"
-            BuildableName = "TestApp.app"
-            BlueprintName = "TestApp"
-            ReferencedContainer = "container:TestApp.xcodeproj">
+            BlueprintIdentifier = "84882C6618D7014700BCECA6"
+            BuildableName = "SplayTree"
+            BlueprintName = "SplayTree"
+            ReferencedContainer = "container:SplayTree.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
