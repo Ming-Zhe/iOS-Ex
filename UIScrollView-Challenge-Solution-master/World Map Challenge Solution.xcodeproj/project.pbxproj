@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FD95CF11812BAD700317025 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD95CF01812BAD700317025 /* Foundation.framework */; };
+		6FD95CF31812BAD700317025 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD95CF21812BAD700317025 /* CoreGraphics.framework */; };
+		6FD95CF51812BAD700317025 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD95CF41812BAD700317025 /* UIKit.framework */; };
+		6FD95CFB1812BAD700317025 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FD95CF91812BAD700317025 /* InfoPlist.strings */; };
+		6FD95CFD1812BAD700317025 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD95CFC1812BAD700317025 /* main.m */; };
+		6FD95D011812BAD700317025 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD95D001812BAD700317025 /* CCAppDelegate.m */; };
+		6FD95D041812BAD700317025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD95D021812BAD700317025 /* Main.storyboard */; };
+		6FD95D071812BAD700317025 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD95D061812BAD700317025 /* CCViewController.m */; };
+		6FD95D091812BAD700317025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD95D081812BAD700317025 /* Images.xcassets */; };
+		6FD95D101812BAD700317025 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD95D0F1812BAD700317025 /* XCTest.framework */; };
+		6FD95D111812BAD700317025 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD95CF01812BAD700317025 /* Foundation.framework */; };
+		6FD95D121812BAD700317025 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD95CF41812BAD700317025 /* UIKit.framework */; };
+		6FD95D1A1812BAD700317025 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FD95D181812BAD700317025 /* InfoPlist.strings */; };
+		6FD95D1C1812BAD700317025 /* World_Map_Challenge_SolutionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD95D1B1812BAD700317025 /* World_Map_Challenge_SolutionTests.m */; };
+		6FD95D2A1812BCF600317025 /* worldMap.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FD95D291812BCF600317025 /* worldMap.jpeg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FD95D131812BAD700317025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FD95CE51812BAD700317025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FD95CEC1812BAD700317025;
+			remoteInfo = "World Map Challenge Solution";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6FD95CED1812BAD700317025 /* World Map Challenge Solution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Map Challenge Solution.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD95CF01812BAD700317025 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6FD95CF21812BAD700317025 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6FD95CF41812BAD700317025 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6FD95CF81812BAD700317025 /* World Map Challenge Solution-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "World Map Challenge Solution-Info.plist"; sourceTree = "<group>"; };
+		6FD95CFA1812BAD700317025 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6FD95CFC1812BAD700317025 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6FD95CFE1812BAD700317025 /* World Map Challenge Solution-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "World Map Challenge Solution-Prefix.pch"; sourceTree = "<group>"; };
+		6FD95CFF1812BAD700317025 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
+		6FD95D001812BAD700317025 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
+		6FD95D031812BAD700317025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6FD95D051812BAD700317025 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		6FD95D061812BAD700317025 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		6FD95D081812BAD700317025 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6FD95D0E1812BAD700317025 /* World Map Challenge SolutionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "World Map Challenge SolutionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD95D0F1812BAD700317025 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6FD95D171812BAD700317025 /* World Map Challenge SolutionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "World Map Challenge SolutionTests-Info.plist"; sourceTree = "<group>"; };
+		6FD95D191812BAD700317025 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6FD95D1B1812BAD700317025 /* World_Map_Challenge_SolutionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = World_Map_Challenge_SolutionTests.m; sourceTree = "<group>"; };
+		6FD95D291812BCF600317025 /* worldMap.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = worldMap.jpeg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FD95CEA1812BAD700317025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD95CF31812BAD700317025 /* CoreGraphics.framework in Frameworks */,
+				6FD95CF51812BAD700317025 /* UIKit.framework in Frameworks */,
+				6FD95CF11812BAD700317025 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD95D0B1812BAD700317025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD95D101812BAD700317025 /* XCTest.framework in Frameworks */,
+				6FD95D121812BAD700317025 /* UIKit.framework in Frameworks */,
+				6FD95D111812BAD700317025 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FD95CE41812BAD700317025 = {
+			isa = PBXGroup;
+			children = (
+				6FD95CF61812BAD700317025 /* World Map Challenge Solution */,
+				6FD95D151812BAD700317025 /* World Map Challenge SolutionTests */,
+				6FD95CEF1812BAD700317025 /* Frameworks */,
+				6FD95CEE1812BAD700317025 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FD95CEE1812BAD700317025 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FD95CED1812BAD700317025 /* World Map Challenge Solution.app */,
+				6FD95D0E1812BAD700317025 /* World Map Challenge SolutionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FD95CEF1812BAD700317025 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FD95CF01812BAD700317025 /* Foundation.framework */,
+				6FD95CF21812BAD700317025 /* CoreGraphics.framework */,
+				6FD95CF41812BAD700317025 /* UIKit.framework */,
+				6FD95D0F1812BAD700317025 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FD95CF61812BAD700317025 /* World Map Challenge Solution */ = {
+			isa = PBXGroup;
+			children = (
+				6FD95CFF1812BAD700317025 /* CCAppDelegate.h */,
+				6FD95D001812BAD700317025 /* CCAppDelegate.m */,
+				6FD95D021812BAD700317025 /* Main.storyboard */,
+				6FD95D051812BAD700317025 /* CCViewController.h */,
+				6FD95D061812BAD700317025 /* CCViewController.m */,
+				6FD95D081812BAD700317025 /* Images.xcassets */,
+				6FD95CF71812BAD700317025 /* Supporting Files */,
+			);
+			path = "World Map Challenge Solution";
+			sourceTree = "<group>";
+		};
+		6FD95CF71812BAD700317025 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FD95D291812BCF600317025 /* worldMap.jpeg */,
+				6FD95CF81812BAD700317025 /* World Map Challenge Solution-Info.plist */,
+				6FD95CF91812BAD700317025 /* InfoPlist.strings */,
+				6FD95CFC1812BAD700317025 /* main.m */,
+				6FD95CFE1812BAD700317025 /* World Map Challenge Solution-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FD95D151812BAD700317025 /* World Map Challenge SolutionTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FD95D1B1812BAD700317025 /* World_Map_Challenge_SolutionTests.m */,
+				6FD95D161812BAD700317025 /* Supporting Files */,
+			);
+			path = "World Map Challenge SolutionTests";
+			sourceTree = "<group>";
+		};
+		6FD95D161812BAD700317025 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FD95D171812BAD700317025 /* World Map Challenge SolutionTests-Info.plist */,
+				6FD95D181812BAD700317025 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FD95CEC1812BAD700317025 /* World Map Challenge Solution */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD95D1F1812BAD700317025 /* Build configuration list for PBXNativeTarget "World Map Challenge Solution" */;
+			buildPhases = (
+				6FD95CE91812BAD700317025 /* Sources */,
+				6FD95CEA1812BAD700317025 /* Frameworks */,
+				6FD95CEB1812BAD700317025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "World Map Challenge Solution";
+			productName = "World Map Challenge Solution";
+			productReference = 6FD95CED1812BAD700317025 /* World Map Challenge Solution.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FD95D0D1812BAD700317025 /* World Map Challenge SolutionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD95D221812BAD700317025 /* Build configuration list for PBXNativeTarget "World Map Challenge SolutionTests" */;
+			buildPhases = (
+				6FD95D0A1812BAD700317025 /* Sources */,
+				6FD95D0B1812BAD700317025 /* Frameworks */,
+				6FD95D0C1812BAD700317025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FD95D141812BAD700317025 /* PBXTargetDependency */,
+			);
+			name = "World Map Challenge SolutionTests";
+			productName = "World Map Challenge SolutionTests";
+			productReference = 6FD95D0E1812BAD700317025 /* World Map Challenge SolutionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FD95CE51812BAD700317025 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Code Coalition";
+				TargetAttributes = {
+					6FD95D0D1812BAD700317025 = {
+						TestTargetID = 6FD95CEC1812BAD700317025;
+					};
+				};
+			};
+			buildConfigurationList = 6FD95CE81812BAD700317025 /* Build configuration list for PBXProject "World Map Challenge Solution" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FD95CE41812BAD700317025;
+			productRefGroup = 6FD95CEE1812BAD700317025 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FD95CEC1812BAD700317025 /* World Map Challenge Solution */,
+				6FD95D0D1812BAD700317025 /* World Map Challenge SolutionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FD95CEB1812BAD700317025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD95D091812BAD700317025 /* Images.xcassets in Resources */,
+				6FD95CFB1812BAD700317025 /* InfoPlist.strings in Resources */,
+				6FD95D041812BAD700317025 /* Main.storyboard in Resources */,
+				6FD95D2A1812BCF600317025 /* worldMap.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD95D0C1812BAD700317025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD95D1A1812BAD700317025 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FD95CE91812BAD700317025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD95D011812BAD700317025 /* CCAppDelegate.m in Sources */,
+				6FD95CFD1812BAD700317025 /* main.m in Sources */,
+				6FD95D071812BAD700317025 /* CCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FD95D0A1812BAD700317025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD95D1C1812BAD700317025 /* World_Map_Challenge_SolutionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FD95D141812BAD700317025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FD95CEC1812BAD700317025 /* World Map Challenge Solution */;
+			targetProxy = 6FD95D131812BAD700317025 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6FD95CF91812BAD700317025 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FD95CFA1812BAD700317025 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6FD95D021812BAD700317025 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FD95D031812BAD700317025 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6FD95D181812BAD700317025 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FD95D191812BAD700317025 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6FD95D1D1812BAD700317025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6FD95D1E1812BAD700317025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FD95D201812BAD700317025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "World Map Challenge Solution/World Map Challenge Solution-Prefix.pch";
+				INFOPLIST_FILE = "World Map Challenge Solution/World Map Challenge Solution-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6FD95D211812BAD700317025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "World Map Challenge Solution/World Map Challenge Solution-Prefix.pch";
+				INFOPLIST_FILE = "World Map Challenge Solution/World Map Challenge Solution-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6FD95D231812BAD700317025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/World Map Challenge Solution.app/World Map Challenge Solution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "World Map Challenge Solution/World Map Challenge Solution-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "World Map Challenge SolutionTests/World Map Challenge SolutionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6FD95D241812BAD700317025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/World Map Challenge Solution.app/World Map Challenge Solution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "World Map Challenge Solution/World Map Challenge Solution-Prefix.pch";
+				INFOPLIST_FILE = "World Map Challenge SolutionTests/World Map Challenge SolutionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FD95CE81812BAD700317025 /* Build configuration list for PBXProject "World Map Challenge Solution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD95D1D1812BAD700317025 /* Debug */,
+				6FD95D1E1812BAD700317025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD95D1F1812BAD700317025 /* Build configuration list for PBXNativeTarget "World Map Challenge Solution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD95D201812BAD700317025 /* Debug */,
+				6FD95D211812BAD700317025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6FD95D221812BAD700317025 /* Build configuration list for PBXNativeTarget "World Map Challenge SolutionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FD95D231812BAD700317025 /* Debug */,
+				6FD95D241812BAD700317025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FD95CE51812BAD700317025 /* Project object */;
+}
