@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 typedef struct node{
     struct node* pre;
@@ -25,7 +24,7 @@ Tree to_right_double_zigzag(Tree tree);
 Tree to_left_double_zigzag(Tree tree);
 
 Tree find_item(Tree tree, int key);
-void move_to_top(Tree tree, int key);
+Tree move_to_top(Tree tree, int key);
 
 Tree zig(Tree tree)
 {
@@ -110,150 +109,88 @@ Tree find_item(Tree tree, int key)
     }
 }
 
-void move_to_top(Tree tree , int key)
+Tree move_to_top(Tree tree , int key)
 {
     Tree toMove;
     toMove = find_item(tree, key);
     if (toMove == NULL) {
         printf("not exist!\n");
+        return toMove;
     }else if (toMove->pre == NULL){
         printf("already on the top\n");
-    }else if (toMove->pre != NULL){
+        return toMove;
+    }
+    while (toMove->pre != NULL){
         if (toMove->pre->pre == NULL) {
             if (toMove == toMove->pre->lchild) {
-                zig(toMove->pre);
+                toMove = zig(toMove->pre);
             }else{
-                zag(toMove->pre);
+                toMove = zag(toMove->pre);
             }
         }else{
             if (toMove->pre == toMove->pre->pre->lchild) {
                 if (toMove == toMove->pre->lchild) {
-                    to_right_zigzig(tree);
+                    toMove = to_right_zigzig(toMove);
                 }else{
-                    to_right_double_zigzag(tree);
+                    toMove = to_right_double_zigzag(toMove);
                 }
             }else{
                 if (toMove == toMove->pre->lchild) {
-                    to_left_double_zigzag(tree);
+                    toMove = to_left_double_zigzag(toMove);
                 }else{
-                    to_left_zigzig(tree);
+                    toMove = to_left_zigzig(toMove);
                 }
             }
         }
     }
+    return toMove;
 }
 
-node *create(int key) {
-    node *newnode;
-    newnode = (node*)malloc(sizeof(node));
-    if( newnode == NULL) {
-        return NULL;
+void insert_node_to_nonempty_tree(Tree tree, node* np)
+{
+    /* insert the node */
+    if(np->value < tree->value) {
+        if (tree->lchild == NULL) {
+            /* then tr->lchild is the proper place */
+            tree->lchild = np;
+            np->pre = tree;
+            return;
+        }
+        else {
+            insert_node_to_nonempty_tree(tree->lchild, np);
+        }
     }
-    newnode->value = key;
-    newnode->rchild = newnode->lchild = newnode->pre = NULL;
-    return newnode;
+    else if(np->value > tree->value) {
+        if (tree->rchild == NULL) {
+            tree->rchild = np;
+            np->pre = tree;
+            return;
+        }
+        else {
+            insert_node_to_nonempty_tree(tree->rchild, np);
+        }
+    }
 }
 
-bool insertNode(int key, Tree tree){
-    Tree preNode = NULL;
-    Tree curr = tree;
+Tree insert_value(Tree tree, int key)
+{
+    node* np;
+    /* prepare the node */
+    np = (Tree) malloc(sizeof(node));
+    np->value = key;
+    np->pre  = NULL;
+    np->lchild  = NULL;
+    np->rchild  = NULL;
     
-    while(curr != NULL) {
-        if(key < curr->value) { // 向左
-            preNode = curr;
-            curr = curr->lchild;
-        }
-        else if(key > curr->value) { // 向右
-            preNode = curr;
-            curr = curr->rchild;
-        }
-        else // 失败
-            return 0;
+    if (tree == NULL) tree = np;
+    else {
+        insert_node_to_nonempty_tree(tree, np);
     }
-    
-    curr = (Tree)malloc(sizeof(node)); // 插入
-    curr->value = key;
-    curr->lchild = curr->rchild = NULL;
-    curr->pre = preNode;
-    if(preNode == NULL)
-        tree = curr;
-    else{
-        if (curr->value < preNode->value) {
-            preNode->lchild=curr;
-        }
-        else{
-            preNode->rchild=curr;
-        }
-    }
-    return 1;
-}
-
-bool deleteNode(Tree T, int key){
-    node* par = NULL;
-    node* tmp;
-    while(T != NULL) {
-        if(key < T->value) { // 向左
-            par = T;
-            T = T->lchild;
-        }
-        else if(key > T->value) { // 向右
-            par = T;
-            T = T->rchild;
-        }
-        else { // 找到了
-            if(NULL==T->lchild && NULL==T->rchild) { // 叶子结点
-                if(par == NULL) { // 根结点
-                    free (T);
-                    T = NULL;
-                }
-                else { // 非根结点
-                    (par->lchild==T)?(par->lchild=NULL):(par->rchild=NULL);
-                    free(T);
-                    T = NULL;
-                }
-            }
-            else if(NULL!=T->lchild && NULL==T->rchild) { // 只有左孩子
-                if(par == NULL) { // 根结点
-                    tmp = T;
-                    T = T->lchild;
-                    free(tmp);
-                }
-                else { // 非根结点
-                    (par->lchild==T)?(par->lchild=T->lchild):(par->rchild=T->lchild);
-                    free(T);
-                }
-            }
-            else if(NULL!=T->rchild && NULL==T->lchild) { // 只有右孩子
-                if(par == NULL) { // 根结点
-                    tmp = T;
-                    T = T->rchild;
-                    free(tmp);
-                }
-                else { // 非根结点
-                    (par->lchild==T)?(par->lchild=T->rchild):(par->rchild=T->rchild);
-                    free(T);
-                }
-            }
-            else { // 既有左孩子也有右孩子
-                node* leftNode = T;
-                while(leftNode->rchild != NULL) {
-                    par = leftNode;
-                    leftNode = leftNode->rchild;
-                }
-                // 交换leftNode与node
-                int swapValue = leftNode->value;
-                leftNode->value = T->value;
-                T->value = swapValue;
-                // 删除leftNode，parent肯定不为空
-                (par->lchild==T)?(par->lchild=NULL):(par->rchild=NULL);
-                free(T);
-            }
-        }
-    }
-    return false; // 失败
+    return tree;
 }
 
 void InOrder(node *root) {
+    //printf("test\n");
     if(root == NULL) {
         return; }
     InOrder(root->lchild);
@@ -267,20 +204,38 @@ int main(int argc, const char * argv[])
 
     // insert code here...
     Tree tree;
-    tree = create(10);
-    insertNode(8, tree);
-    insertNode(6, tree);
-    insertNode(7, tree);
-    insertNode(11, tree);
-    insertNode(14, tree);
-    insertNode(12, tree);
-    insertNode(9, tree);
     
-    InOrder(tree);
+    tree = insert_value(tree, 10);
+    tree = insert_value(tree, 8);
+    tree = insert_value(tree, 9);
+    tree = insert_value(tree, 7);
+    tree = insert_value(tree, 6);
+    tree = insert_value(tree, 12);
+    tree = insert_value(tree, 13);
+    tree = insert_value(tree, 11);
     
-    move_to_top(tree, 9);
+//    printf("%d\n",tree->lchild->value);
+//    printf("%d\n",tree->lchild->lchild->value);
+//    printf("%d\n",tree->lchild->lchild->lchild->value);
+//    printf("%d\n",tree->lchild->rchild->value);
     
-    printf("%d",tree->lchild->value);
+//    test = find_item(tree, 7);
+////    printf("%d\n",test->value);
+////    printf("%d\n",test->lchild->value);
+////    printf("%d\n",test->rchild->value);
+//    
+//    test = to_right_zigzig(test);
+//    printf("%d\n",test->value);
+//    printf("%d\n",test->lchild->value);
+//    printf("%d\n",test->rchild->value);
+//    printf("%d\n",test->rchild->rchild->lchild->value);
+    
+    tree = move_to_top(tree, 7);
+    printf("%d\n",tree->lchild->value);
+    printf("%d\n",tree->rchild->rchild->lchild->value);
+    printf("%d\n",tree->rchild->rchild->rchild->lchild->value);
+    //printf("%d\n",tree->rchild->rchild->value);
+
     return 0;
 }
 
