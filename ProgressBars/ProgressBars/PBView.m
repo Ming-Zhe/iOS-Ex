@@ -46,9 +46,9 @@
 //    CGContextFillPath(context);
     
     
-    CGRect barRect = CGRectInset(self.bounds, 0, 2.0f);
+    CGRect barRect = CGRectInset(self.bounds, 0, 4.0f);
     CGFloat maxWidth = barRect.size.width;
-    CGFloat textWidth = 5.0 + strlen(c_text) * 5.0 + 10.0 + 5.0;
+    CGFloat textWidth = 4.0 + strlen(c_text) * 4.0 + 8.0 + 4.0;
 
     barRect.size.width = self.progress * barRect.size.width;
     CGContextSetRGBFillColor(context, 220.0/255.0f, 220.0/255.0f, 220.0/255.0f, 1.0f);
@@ -65,14 +65,13 @@
 //    [@"TEST" drawAtPoint:CGPointMake(barRect.origin.x, barRect.origin.y) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:16]}];
     
     
-    CGRect progressRect = CGRectInset(self.bounds, 0, 2.0f);
+    CGRect progressRect = CGRectInset(self.bounds, 0, 4.0f);
     progressRect.size.width = self.progress * progressRect.size.width;
     CGContextSetFillColorWithColor(context, self.progressColor.CGColor);
     CGContextMoveToPoint(context, progressRect.origin.x, progressRect.origin.y);
-    CGContextAddLineToPoint(context, progressRect.origin.x, progressRect.origin.y
-                            + progressRect.size.height);
-    CGContextAddLineToPoint(context, MIN(progressRect.origin.x + progressRect.size.width, maxWidth - textWidth), progressRect.origin.y + progressRect.size.height);
-    CGContextAddLineToPoint(context, MIN(progressRect.origin.x + progressRect.size.width, maxWidth - textWidth), progressRect.origin.y);
+    CGContextAddLineToPoint(context, progressRect.origin.x, progressRect.origin.y + progressRect.size.height);
+    CGContextAddLineToPoint(context, MIN(progressRect.origin.x + progressRect.size.width, maxWidth - textWidth + 8), progressRect.origin.y + progressRect.size.height);
+    CGContextAddLineToPoint(context, MIN(progressRect.origin.x + progressRect.size.width, maxWidth - textWidth + 8), progressRect.origin.y);
     CGContextAddLineToPoint(context, progressRect.origin.x, progressRect.origin.y);
     CGContextFillPath(context);
     
@@ -92,10 +91,10 @@
 //    CGContextFillRect(context, [self bounds]);
     CGContextSetTextDrawingMode(context, kCGTextStroke);
     CGContextSetRGBFillColor(context, 0.0, 1.0, 0.0, 1.0);
-    CGContextSelectFont(context, "HelveticaNeue-UltraLight", 12.0, kCGEncodingMacRoman);
+    CGContextSelectFont(context, "HelveticaNeue-UltraLight", 10.0, kCGEncodingMacRoman);
     CGAffineTransform transform = CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0);
     CGContextSetTextMatrix(context, transform);
-    CGContextShowTextAtPoint(context, MIN(textRect.origin.x + current + 5, maxWidth - textWidth), textRect.origin.y + (CGRectGetHeight(textRect)), c_text, strlen(c_text));
+    CGContextShowTextAtPoint(context, MIN(textRect.origin.x + current + 5.0, maxWidth - textWidth + 8.0), textRect.origin.y + (CGRectGetHeight(textRect)-1), c_text, strlen(c_text));
     
 //    CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
 //    NSString *text = @"TEST";

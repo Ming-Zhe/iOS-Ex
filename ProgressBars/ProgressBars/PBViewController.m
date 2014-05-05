@@ -9,7 +9,7 @@
 #import "PBViewController.h"
 #import "PBView.h"
 
-static const CGSize progressViewSize = { 300.0f, 8.0f };
+static const CGSize progressViewSize = { 300.0f, 10.0f };
 
 @interface PBViewController ()
 
@@ -48,13 +48,13 @@ static const CGSize progressViewSize = { 300.0f, 8.0f };
     
     self.progressViews = @[ progressView ];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];
 }
 
 
 - (void)updateProgress
 {
-    self.progress += 0.20f;
+    self.progress += 0.020f;
     if (self.progress > 1.00001f) {
         self.progress = 0;
     }
