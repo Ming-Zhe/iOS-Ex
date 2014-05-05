@@ -22,15 +22,6 @@ static const CGSize progressViewSize = { 300.0f, 10.0f };
 
 @implementation PBViewController
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
-
 - (void)viewDidLoad
 {
 //    [super viewDidLoad];
@@ -55,15 +46,12 @@ static const CGSize progressViewSize = { 300.0f, 10.0f };
 - (void)updateProgress
 {
     self.progress += 0.020f;
-    if (self.progress > 1.00001f) {
+    if (self.progress > 1.0f) {
         self.progress = 0;
     }
-    //    NSLog(@"%f",self.progress);
-    
     [self.progressViews enumerateObjectsUsingBlock:^(PBView *progressView, NSUInteger idx, BOOL *stop) {
         [progressView setProgress:self.progress animated:YES];
     }];
-    //    [[self.progressViews objectAtIndex:1] setProgress:self.progress animated:YES];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -71,21 +59,10 @@ static const CGSize progressViewSize = { 300.0f, 10.0f };
     return UIStatusBarStyleLightContent;
 }
 
-//- (void)didReceiveMemoryWarning
-//{
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)didReceiveMemoryWarning
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-*/
 
 @end
